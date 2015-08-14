@@ -7,6 +7,8 @@
 //      否则，若 y2 > y1, d|max = max(maxDist, y1-x2)，delete (x1,y1)
 //		     若 y2 <= y1, d|max = max(maxDist, y2-x2), delete (x2,y2)
 // return maxDist;
+//
+// 算法时间复杂度O(n)
 
 package main
 
