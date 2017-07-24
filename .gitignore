@@ -1,2 +1,4 @@
 #useless files
 .DS_Store
+**/target
+**/*.class

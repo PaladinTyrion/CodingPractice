@@ -24,6 +24,13 @@ import java.util.Collections;
  * 显然a[x],因为它更有潜力，也就是说我们可以用a[x]来替换掉a[y]，
  * 也就是说我们需要维护一个数据结构来存储可能的递增子序列的元素，并且需要在某些时候进行替换。
  * 因此我们可以用一个链表来存储，并且在查找替换位置的时候用二分查找来实现，这样时间复杂度为O(nlogn)。
+ *
+ * (3)
+ * 最大上升子序列可以转化为最长公共子序列的问题
+ * 记序列A，排序A序列为序列B
+ * 最长公共子序列即是A的最大上升子序列
+ * 不实现这个了。算法的时间复杂度是排序的时间复杂度+计算最长公共子序列的时间复杂度，
+ * 应为O(nlogn)+O(nlogn)=O(2nlogn),即为O(nlogn)
  */
 public class LIS {
 
@@ -51,7 +58,7 @@ public class LIS {
     }
 
     /**
-     * 第二种求节方法，可以直接返回dp.size()也可以得到最大上升子序列长度，时间复杂度O(nlogn)
+     * 第二种求解方法，可以直接返回dp.size()也可以得到最大上升子序列长度，时间复杂度O(nlogn)
      * @param nums
      * @return
      */
@@ -88,7 +95,6 @@ public class LIS {
 
         int res = getLis(nums);
         System.out.println(res);
-
 
         ArrayList<Integer> dp = getLIS(nums);
         System.out.println(dp);
